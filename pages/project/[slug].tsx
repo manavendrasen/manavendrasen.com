@@ -23,7 +23,6 @@ const Project: React.FC<IProps> = ({ post }) => {
       <Link href='/'>
         <a>Home</a>
       </Link>
-      {/* <pre>{JSON.stringify(post, null, 2)}</pre> */}
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   );
@@ -38,7 +37,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const post = await getPost(context.params?.slug as string);
-
   return {
     props: {
       post,

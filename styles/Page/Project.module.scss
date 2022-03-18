@@ -1,3 +1,13 @@
 .container {
   padding: 2rem;
+  img {
+    width: 100%;
+  }
+  @media (min-width: 1024px) {
+    padding: 2rem 24rem;
+
+    img {
+      width: auto;
+    }
+  }
 }
