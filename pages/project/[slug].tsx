@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
 
 import { getPost } from "../../api/postRequests";
 
@@ -35,8 +36,8 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  const post = await getPost(params.slug);
+export const getStaticProps: GetStaticProps = async (context) => {
+  const post = await getPost(context.params?.slug as string);
 
   return {
     props: {
