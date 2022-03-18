@@ -33,7 +33,7 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
         <ul>
           {posts.map((post) => (
             <li key={post.slug}>
-              <Link href='/projects/[slug]' as={`/posts/${post.slug}`}>
+              <Link href='/project/[slug]' as={`/project/${post.slug}`}>
                 <a>{post.title}</a>
               </Link>
             </li>

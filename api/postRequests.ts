@@ -15,3 +15,11 @@ export async function getPostTitle() {
   const data = await response.json();
   return data.posts;
 }
+
+export async function getPost(slug: string) {
+  const response = await fetch(
+    `${API}/posts/?key=${process.env.NEXT_PUBLIC_GHOST_CONTENT_API_KEY}&slug=${slug}`
+  );
+  const data = await response.json();
+  return data.posts[0];
+}
