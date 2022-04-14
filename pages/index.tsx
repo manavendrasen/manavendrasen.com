@@ -29,9 +29,21 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
         description="A blog about software development, programming, and more."
       />
       <Container>
-        <main className="min-h-screen flex-1 flex flex-col justify-center items-center">
-          <h1 className="text-2xl font-bold">Hello to my portfolio</h1>
-          <ul>
+        <main className="py-16 flex-1 flex flex-col justify-center items-start gap-4">
+          <h2 className="text-xl font-semibold dark:text-slate-50">
+            Hi, I&apos;m Manavendra Sen 👋
+          </h2>
+          <h1 className="text-3xl font-bold leading-snug dark:text-slate-50">
+            Developer + UI/UX Designer from India <br /> I build beautiful and
+            interactive experiences.
+          </h1>
+          <p className="font-base text-slate-500 dark:text-slate-400">
+            I&apos;m a software engineer and UI/UX designer based in India.
+            <br />
+            I&apos;m passionate about building beautiful and interactive
+            experiences.
+          </p>
+          {/* <ul>
             {posts.map(post => (
               <li key={post.slug}>
                 <Link href="/project/[slug]" as={`/project/${post.slug}`}>
@@ -39,7 +51,7 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </main>
       </Container>
       <Footer />
