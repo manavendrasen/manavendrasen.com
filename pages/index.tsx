@@ -8,6 +8,8 @@ import Container from "../components/Layout/Container/Container";
 import Navbar from "../components/Layout/Navbar/Navbar";
 import { Head } from "../components/Head/Head";
 import MobileNav from "../components/Layout/MobileNav/MobileNav";
+import experience from "../constants/experience";
+import Experience from "../components/Home/Experience/Experience";
 
 interface IHomeProps {
   posts: Post[];
@@ -45,15 +47,27 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
             I&apos;m passionate about building beautiful and interactive
             experiences.
           </p>
-          {/* <ul>
-            {posts.map(post => (
-              <li key={post.slug}>
-                <Link href="/project/[slug]" as={`/project/${post.slug}`}>
-                  <a>{post.title}</a>
-                </Link>
-              </li>
-            ))}
-          </ul> */}
+
+          <section className="flex flex-col gap-4 my-24 w-full">
+            <h2 className="text-xl font-semibold dark:text-slate-50 mb-4">
+              Work Experience
+            </h2>
+            <div className="flex flex-col gap-16">
+              {experience.map(ex => (
+                <Experience
+                  id={ex.id}
+                  key={ex.id}
+                  company={ex.company}
+                  description={ex.description}
+                  endDate={ex.endDate}
+                  startDate={ex.startDate}
+                  location={ex.location}
+                  logo={ex.logo}
+                  title={ex.title}
+                />
+              ))}
+            </div>
+          </section>
         </main>
       </Container>
       <Footer />
@@ -69,3 +83,14 @@ export const getStaticProps = async () => {
 };
 
 export default Home;
+{
+  /* <ul>
+            {posts.map(post => (
+              <li key={post.slug}>
+                <Link href="/project/[slug]" as={`/project/${post.slug}`}>
+                  <a>{post.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul> */
+}
