@@ -24,16 +24,16 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
     <div className={styles.container}>
       <Head>
         <title>Portfolio - Manavendra Sen</title>
-        <meta name='description' content='Portfolio of Manavendra Sen' />
-        <link rel='icon' href='/favicon.ico' />
+        <meta name="description" content="Portfolio of Manavendra Sen" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1>Hello to my portfolio</h1>
+        <h1 className="text-2xl">Hello to my portfolio</h1>
         <ul>
-          {posts.map((post) => (
+          {posts.map(post => (
             <li key={post.slug}>
-              <Link href='/project/[slug]' as={`/project/${post.slug}`}>
+              <Link href="/project/[slug]" as={`/project/${post.slug}`}>
                 <a>{post.title}</a>
               </Link>
             </li>

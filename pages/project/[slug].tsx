@@ -23,10 +23,10 @@ const Project: React.FC<IProps> = ({ post }) => {
     <div className={styles.container}>
       <Head>
         <title>{post.title}</title>
-        <meta name='description' content={`${post.custom_excerpt}`} />
-        <link rel='icon' href='/favicon.ico' />
+        <meta name="description" content={`${post.custom_excerpt}`} />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Link href='/'>
+      <Link href="/">
         <a>Home</a>
       </Link>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -41,7 +41,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async context => {
   const post = await getPost(context.params?.slug as string);
   return {
     props: {
