@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
-import Head from "next/head";
+
 import Link from "next/link";
 
-import styles from "../styles/Home.module.scss";
-
-import Footer from "../components/Footer/Footer";
+import Footer from "../components/Layout/Footer/Footer";
 import { getPostTitle } from "../api/postRequests";
+import Container from "../components/Layout/Container/Container";
+import Navbar from "../components/Layout/Navbar/Navbar";
+import { Head } from "../components/Head/Head";
 
 interface IHomeProps {
   posts: Post[];
@@ -21,28 +22,28 @@ type Post = {
 
 const Home: NextPage<IHomeProps> = ({ posts }) => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Portfolio - Manavendra Sen</title>
-        <meta name="description" content="Portfolio of Manavendra Sen" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className="text-2xl">Hello to my portfolio</h1>
-        <ul>
-          {posts.map(post => (
-            <li key={post.slug}>
-              <Link href="/project/[slug]" as={`/project/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </main>
-
+    <>
+      <Navbar />
+      <Head
+        title="Portfolio - Manavendra Sen | Home"
+        description="A blog about software development, programming, and more."
+      />
+      <Container>
+        <main className="min-h-screen flex-1 flex flex-col justify-center items-center">
+          <h1 className="text-2xl font-bold">Hello to my portfolio</h1>
+          <ul>
+            {posts.map(post => (
+              <li key={post.slug}>
+                <Link href="/project/[slug]" as={`/project/${post.slug}`}>
+                  <a>{post.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </main>
+      </Container>
       <Footer />
-    </div>
+    </>
   );
 };
 
