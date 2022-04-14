@@ -6,7 +6,7 @@ interface MobileNavProps {}
 
 const MobileNav: React.FC<MobileNavProps> = () => {
   return (
-    <div className="fixed bottom-16 bg-slate-50 rounded-3xl py-2 pl-8 shadow-md left-1/2 -translate-x-1/2 block xl:hidden">
+    <div className="z-50 fixed bottom-16 bg-slate-50 rounded-3xl py-2 pl-6 shadow-md left-1/2 -translate-x-1/2 block xl:hidden">
       <div className="flex justify-center items-center gap-5 w-max">
         {navLinks.map(link => (
           <div key={link.name}>
