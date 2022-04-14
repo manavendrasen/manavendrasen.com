@@ -9,7 +9,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   console.log(navLinks.map(link => link.name));
 
   return (
-    <nav>
+    <nav className="hidden xl:block">
       <Container>
         <div className="flex justify-between items-center py-8">
           <div className="flex items-center gap-6">

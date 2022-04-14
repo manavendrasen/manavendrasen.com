@@ -7,6 +7,7 @@ import { getPostTitle } from "../api/postRequests";
 import Container from "../components/Layout/Container/Container";
 import Navbar from "../components/Layout/Navbar/Navbar";
 import { Head } from "../components/Head/Head";
+import MobileNav from "../components/Layout/MobileNav/MobileNav";
 
 interface IHomeProps {
   posts: Post[];
@@ -22,18 +23,19 @@ type Post = {
 
 const Home: NextPage<IHomeProps> = ({ posts }) => {
   return (
-    <>
+    <div className="relative">
       <Navbar />
+      <MobileNav />
       <Head
         title="Portfolio - Manavendra Sen | Home"
         description="A blog about software development, programming, and more."
       />
       <Container>
-        <main className="py-16 flex-1 flex flex-col justify-center items-start gap-4">
+        <main className="py-24 flex-1 flex flex-col justify-center items-start gap-4">
           <h2 className="text-xl font-semibold dark:text-slate-50">
             Hi, I&apos;m Manavendra Sen 👋
           </h2>
-          <h1 className="text-3xl font-bold leading-snug dark:text-slate-50">
+          <h1 className="text-2xl xl:text-3xl font-bold xl:leading-normal dark:text-slate-50">
             Developer + UI/UX Designer from India <br /> I build beautiful and
             interactive experiences.
           </h1>
@@ -55,7 +57,7 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
         </main>
       </Container>
       <Footer />
-    </>
+    </div>
   );
 };
 
