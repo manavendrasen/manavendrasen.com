@@ -8,8 +8,6 @@ import Container from "../components/Layout/Container/Container";
 import Navbar from "../components/Layout/Navbar/Navbar";
 import { Head } from "../components/Head/Head";
 import MobileNav from "../components/Layout/MobileNav/MobileNav";
-import experience from "../constants/experience";
-import Experience from "../components/Home/Experience/Experience";
 
 interface IHomeProps {
   posts: Post[];
@@ -26,32 +24,32 @@ type Post = {
 const Home: NextPage<IHomeProps> = ({ posts }) => {
   return (
     <div className="relative">
-      <Navbar />
-      <MobileNav />
+      {/* <Navbar /> */}
+      {/* <MobileNav /> */}
       <Head
         title="Portfolio - Manavendra Sen | Home"
         description="A blog about software development, programming, and more."
       />
-      <Container>
-        <main className="py-24 flex-1 flex flex-col justify-center items-start gap-4">
-          <h2 className="text-xl font-semibold dark:text-slate-50">
-            Hi, I&apos;m Manavendra Sen 👋
-          </h2>
-          <h1 className="text-2xl xl:text-3xl font-bold xl:leading-normal dark:text-slate-50">
-            Developer + UI/UX Designer from India <br /> I build beautiful and
-            interactive experiences.
-          </h1>
-          <p className="font-base text-slate-500 dark:text-slate-400">
-            I&apos;m a software engineer and UI/UX designer based in India.
-            <br />
-            I&apos;m passionate about building beautiful and interactive
-            experiences.
-          </p>
 
-          <section className="flex flex-col gap-4 my-24 w-full">
-            <h2 className="text-xl font-semibold dark:text-slate-50 mb-4">
-              Work Experience
+      <main>
+        <Container>
+          <div className="py-16 flex-1 flex flex-col justify-center items-center gap-4">
+            <h1 className="text-3xl font-extrabold uppercase">
+              Manavendra Sen
+            </h1>
+            <h2 className="text-md font-medium text-gray-600 xl:leading-normal text-center">
+              Dell SDE Intern&apos;22 • 5x Hackathon Winner (3x International){" "}
+              <br />
+              Software Developer • UI/UX Designer
             </h2>
+          </div>
+        </Container>
+        {/* <section
+          className="bg-slate-50 flex flex-col gap-4 w-full py-16"
+          id="work-experience"
+        >
+          <Container>
+            <h2 className="text-xl font-semibold mb-4">Work Experience</h2>
             <div className="flex flex-col gap-16">
               {experience.map(ex => (
                 <Experience
@@ -67,20 +65,21 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
                 />
               ))}
             </div>
-          </section>
-        </main>
-      </Container>
-      <Footer />
+          </Container>
+        </section> */}
+      </main>
+
+      {/* <Footer /> */}
     </div>
   );
 };
 
-export const getStaticProps = async () => {
-  const posts = await getPostTitle();
-  return {
-    props: { posts },
-  };
-};
+// export const getStaticProps = async () => {
+//   const posts = await getPostTitle();
+//   return {
+//     props: { posts },
+//   };
+// };
 
 export default Home;
 {
