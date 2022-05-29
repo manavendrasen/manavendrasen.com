@@ -3,25 +3,14 @@ import type { NextPage } from "next";
 import Link from "next/link";
 
 import Footer from "../components/Layout/Footer/Footer";
-import { getPostTitle } from "../api/postRequests";
 import Container from "../components/Layout/Container/Container";
 import Navbar from "../components/Layout/Navbar/Navbar";
 import { Head } from "../components/Head/Head";
 import MobileNav from "../components/Layout/MobileNav/MobileNav";
 
-interface IHomeProps {
-  posts: Post[];
-}
+interface IHomeProps {}
 
-type Post = {
-  id: string;
-  title: string;
-  slug: string;
-  custom_excerpt: string;
-  feature_image: string;
-};
-
-const Home: NextPage<IHomeProps> = ({ posts }) => {
+const Home: NextPage<IHomeProps> = () => {
   return (
     <div className="relative">
       {/* <Navbar /> */}
@@ -44,29 +33,6 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
             </h2>
           </div>
         </Container>
-        {/* <section
-          className="bg-slate-50 flex flex-col gap-4 w-full py-16"
-          id="work-experience"
-        >
-          <Container>
-            <h2 className="text-xl font-semibold mb-4">Work Experience</h2>
-            <div className="flex flex-col gap-16">
-              {experience.map(ex => (
-                <Experience
-                  id={ex.id}
-                  key={ex.id}
-                  company={ex.company}
-                  description={ex.description}
-                  endDate={ex.endDate}
-                  startDate={ex.startDate}
-                  location={ex.location}
-                  logo={ex.logo}
-                  title={ex.title}
-                />
-              ))}
-            </div>
-          </Container>
-        </section> */}
       </main>
 
       {/* <Footer /> */}
@@ -74,22 +40,4 @@ const Home: NextPage<IHomeProps> = ({ posts }) => {
   );
 };
 
-// export const getStaticProps = async () => {
-//   const posts = await getPostTitle();
-//   return {
-//     props: { posts },
-//   };
-// };
-
 export default Home;
-{
-  /* <ul>
-            {posts.map(post => (
-              <li key={post.slug}>
-                <Link href="/project/[slug]" as={`/project/${post.slug}`}>
-                  <a>{post.title}</a>
-                </Link>
-              </li>
-            ))}
-          </ul> */
-}
