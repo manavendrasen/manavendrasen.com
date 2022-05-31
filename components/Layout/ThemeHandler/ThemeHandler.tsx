@@ -1,8 +1,8 @@
 import React from "react";
 import { THEME } from "../../../constants/Theme";
-import { Dark } from "../../../pages/Dark/Dark";
-import { Gruvbox } from "../../../pages/Gruvbox/Gruvbox";
-import { Light } from "../../../pages/Light/Light";
+import Dark from "../../Dark/Dark";
+import Gruvbox from "../../Gruvbox/Gruvbox";
+import Light from "../../Light/Light";
 
 interface ThemeHandlerProps {
   theme: THEME;

@@ -5,7 +5,7 @@ import { Link } from "./Link/Link";
 
 interface GruvboxProps {}
 
-export const Gruvbox: React.FC<GruvboxProps> = ({}) => {
+const Gruvbox: React.FC<GruvboxProps> = ({}) => {
   return (
     <main className="bg-[#32302F] min-h-screen flex justify-center items-center">
       <Container>
@@ -37,3 +37,5 @@ export const Gruvbox: React.FC<GruvboxProps> = ({}) => {
     </main>
   );
 };
+
+export default Gruvbox;

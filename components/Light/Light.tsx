@@ -3,24 +3,24 @@ import Container from "../../components/Layout/Container/Container";
 import { Links } from "../../constants/Links";
 import { Link } from "./Link/Link";
 
-interface DarkProps {}
+interface LightProps {}
 
-export const Dark: React.FC<DarkProps> = ({}) => {
+const Light: React.FC<LightProps> = () => {
   return (
-    <main className="bg-[#0C1229] min-h-screen flex justify-center items-center">
+    <main className="bg-[#F9F0E3] min-h-screen flex justify-center items-center">
       <Container>
         <div className="flex flex-col gap-12 justify-center items-center">
           <div className="flex-1 flex flex-col justify-center items-center gap-2">
-            <h1 className="text-4xl font-extrabold uppercase text-gray-50 text-center">
+            <h1 className="text-4xl font-extrabold uppercase text-center">
               Manavendra Sen
             </h1>
-            <h2 className="text-lg font-medium text-[#AFBBE8] xl:leading-normal text-center">
+            <h2 className="text-lg font-medium text-[#6A6A6A] xl:leading-normal text-center">
               Dell SDE Intern&apos;22 • 5x Hackathon Winner (3x International){" "}
               <br />
               Software Developer • UI/UX Designer
             </h2>
           </div>
-          <div className="grid grid-cols-3 gap-8 justify-center items-center w-1/3">
+          <div className="grid grid-cols-3 gap-8 justify-center items-center md:w-1/3">
             {Links.map(link => (
               <Link
                 key={link.href}
@@ -37,3 +37,5 @@ export const Dark: React.FC<DarkProps> = ({}) => {
     </main>
   );
 };
+
+export default Light;
