@@ -20,7 +20,7 @@ const Dark: React.FC<DarkProps> = ({}) => {
               Software Developer • UI/UX Designer
             </h2>
           </div>
-          <div className="grid grid-cols-3 gap-8 justify-center items-center w-1/3">
+          <div className="grid grid-cols-3 gap-8 justify-center items-center md:w-1/3">
             {Links.map(link => (
               <Link
                 key={link.href}
