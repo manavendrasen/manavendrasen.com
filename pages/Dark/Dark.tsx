@@ -11,7 +11,7 @@ export const Dark: React.FC<DarkProps> = ({}) => {
       <Container>
         <div className="flex flex-col gap-12 justify-center items-center">
           <div className="flex-1 flex flex-col justify-center items-center gap-2">
-            <h1 className="text-4xl font-extrabold uppercase text-gray-50">
+            <h1 className="text-4xl font-extrabold uppercase text-gray-50 text-center">
               Manavendra Sen
             </h1>
             <h2 className="text-lg font-medium text-[#AFBBE8] xl:leading-normal text-center">
