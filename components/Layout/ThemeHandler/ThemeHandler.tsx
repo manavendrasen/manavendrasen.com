@@ -13,15 +13,12 @@ export const ThemeHandler: React.FC<ThemeHandlerProps> = ({ theme }) => {
   switch (theme) {
     case THEME.LIGHT:
       page = <Light />;
-      console.log("Light");
       break;
     case THEME.DARK:
       page = <Dark />;
-      console.log("Dark");
       break;
     case THEME.GRUVBOX:
       page = <Gruvbox />;
-      console.log("Gruvbox");
       break;
     default:
       page = <Light />;

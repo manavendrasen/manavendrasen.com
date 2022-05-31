@@ -47,5 +47,4 @@ export const Links = [
     primaryColor: "#00394E",
     color: "#ffffff",
   },
-  {},
 ];
