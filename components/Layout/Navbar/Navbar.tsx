@@ -31,6 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
         <div className="flex justify-end items-end py-8">
           <div>
             <Select
+              isSearchable={false}
               value={theme}
               onChange={handleThemeChange}
               options={options}
