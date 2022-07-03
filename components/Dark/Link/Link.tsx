@@ -15,7 +15,6 @@ export const Link: React.FC<LinkProps> = ({
   primaryColor,
   color,
 }) => {
-  console.log(name, href, icon, primaryColor, color);
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
       <div className="flex flex-col gap-2 justify-center items-center">
