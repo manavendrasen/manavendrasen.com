@@ -9,7 +9,7 @@ interface ThemeHandlerProps {
 export const ThemeHandler: React.FC<ThemeHandlerProps> = ({ theme }) => {
   let page;
   switch (theme) {
-    case THEME.DARK:
+    case THEME.DEFAULT:
       page = <Default />;
       break;
     default:
