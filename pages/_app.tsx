@@ -2,10 +2,10 @@ import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import React from "react";
 
-import { ChakraProvider } from "@chakra-ui/react";
+// import { ChakraProvider } from "@chakra-ui/react";
 
 // 1. Import the extendTheme function
-import { extendTheme } from "@chakra-ui/react";
+// import { extendTheme } from "@chakra-ui/react";
 
 const colors = {
   brand: {
@@ -23,12 +23,12 @@ const colors = {
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const theme = extendTheme({ colors });
+  // const theme = extendTheme({ colors });
 
   return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    // <ChakraProvider theme={theme}>
+    <Component {...pageProps} />
+    // </ChakraProvider>
   );
 }
 
