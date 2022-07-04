@@ -1,8 +1,6 @@
 import React from "react";
 import { THEME } from "../../../constants/Theme";
-import Dark from "../../Dark/Dark";
-import Gruvbox from "../../Gruvbox/Gruvbox";
-import Light from "../../Light/Light";
+import Default from "../../../views/Default";
 
 interface ThemeHandlerProps {
   theme: THEME;
@@ -11,17 +9,11 @@ interface ThemeHandlerProps {
 export const ThemeHandler: React.FC<ThemeHandlerProps> = ({ theme }) => {
   let page;
   switch (theme) {
-    case THEME.LIGHT:
-      page = <Light />;
-      break;
     case THEME.DARK:
-      page = <Dark />;
-      break;
-    case THEME.GRUVBOX:
-      page = <Gruvbox />;
+      page = <Default />;
       break;
     default:
-      page = <Light />;
+      page = <Default />;
       break;
   }
   return <div>{page}</div>;
