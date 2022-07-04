@@ -1,6 +1,6 @@
+import React from "react";
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
-import React from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,7 +8,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />;
     </React.Fragment>
   );
-
 }
 
 export default MyApp;
