@@ -5,7 +5,11 @@ module.exports = {
     "./views/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero': "url('/assets/images/bg-hero-default.jpg')",
+      }
+    },
   },
   plugins: [],
 };

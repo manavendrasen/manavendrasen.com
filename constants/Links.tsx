@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
+import Peerlist from "../assets/images/peerlist_icon.png";
 
 export const Links = [
   {
@@ -22,7 +24,7 @@ export const Links = [
   {
     name: "Peerlist",
     href: "https://peerlist.io/manavendrasen",
-    icon: <SiDevpost />,
+    icon: <Image src={Peerlist} alt="" width={20} height={20} />,
     primaryColor: "#00AA45",
     color: "#ffffff",
   },
