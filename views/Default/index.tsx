@@ -1,40 +1,58 @@
 import React from "react";
-import Container from "../../components/Layout/Container/Container";
-import { Links } from "../../constants/Links";
+import { Container } from "@mui/material";
+import { Button } from "./Button/Button";
 import { Link } from "./Link/Link";
+import Navbar from "./Navbar/Navbar";
+import { Links } from "../../constants/Links";
 
 interface DarkProps {}
 
 const Dark: React.FC<DarkProps> = ({}) => {
   return (
-    <main className="bg-[#0C1229] min-h-screen flex justify-center items-center">
-      <Container>
-        <div className="flex flex-col gap-12 justify-center items-center">
-          <div className="flex-1 flex flex-col justify-center items-center gap-2">
-            <h1 className="text-4xl font-extrabold uppercase text-gray-50 text-center">
-              Manavendra Sen
+    <>
+      <Navbar />
+      <main className="bg-[#161622] text-white min-h-screen flex justify-center items-center">
+        <Container>
+          <div className="flex flex-col gap-3">
+            <p className="font-medium">hi 👋, my name is</p>
+            <h1 className="lg:text-6xl text-4xl font-bold">Manavendra Sen</h1>
+            <h1 className="lg:text-6xl text-4xl font-bold leading-tight mix-blend-overlay brightness-120">
+              Developer & UI/UX Designer from India
             </h1>
-            <h2 className="text-lg font-medium text-[#AFBBE8] xl:leading-normal text-center">
-              Dell SDE Intern&apos;22 • 5x Hackathon Winner (3x International){" "}
-              <br />
-              Software Developer • UI/UX Designer
-            </h2>
+            <p className="text-slate-400">
+              I&apos;m a software engineer specializing in building and
+              designing exceptional digital experiences. <br /> Currently
+              I&apos;m building DevOps solutions at{" "}
+              <a
+                className="text-yellow-400"
+                href="https://www.dell.com/en-in"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Dell Technologies
+              </a>
+            </p>
+            <div className="py-4 flex justify-between items-center">
+              <Button onClick={() => {}} text="Let's Connect" />
+              <div>
+                <div className="flex gap-4 justify-center items-center">
+                  {Links.map(link => (
+                    <Link
+                      key={link.href}
+                      name={link.name}
+                      href={link.href}
+                      icon={link.icon}
+                      primaryColor={link.primaryColor}
+                      color={link.color}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-3 gap-8 justify-center items-center md:w-1/3">
-            {Links.map(link => (
-              <Link
-                key={link.href}
-                name={link.name}
-                href={link.href}
-                icon={link.icon}
-                primaryColor={link.primaryColor}
-                color={link.color}
-              />
-            ))}
-          </div>
-        </div>
-      </Container>
-    </main>
+        </Container>
+      </main>
+    </>
   );
 };
 

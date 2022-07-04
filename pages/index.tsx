@@ -13,7 +13,7 @@ const Home: NextPage<IHomeProps> = () => {
         title="Portfolio - Manavendra Sen | Home"
         description="A blog about software development, programming, and more."
       />
-      <ThemeHandler theme={THEME.DARK} />
+      <ThemeHandler theme={THEME.DEFAULT} />
     </div>
   );
 };
