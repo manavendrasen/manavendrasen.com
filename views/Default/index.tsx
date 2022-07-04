@@ -21,11 +21,9 @@ const Dark: React.FC<DarkProps> = ({}) => {
         backgroundSize: "cover",
       }}
     >
-      {/* <div className="w-20 h-11 " /> */}
       <Box
         sx={{
           backdropFilter: "blur(70px) brightness(80%)",
-          // mixBlendMode: "overlay",
         }}
       >
         {/* <Navbar> */}
