@@ -7,4 +7,7 @@ export const YOUTUBE = "YOUTUBE";
 export enum THEME {
   LIGHT,
   DARK,
+  GRUVBOX,
+  SPOTIFY,
+  YOUTUBE,
 }

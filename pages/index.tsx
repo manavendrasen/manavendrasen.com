@@ -14,12 +14,13 @@ import { ThemeHandler } from "../components/Layout/ThemeHandler/ThemeHandler";
 interface IHomeProps {}
 
 const Home: NextPage<IHomeProps> = () => {
-  const themeValues = Object.values(THEME);
-  const [theme, setTheme] = useState<number>(
-    Number(themeValues[Math.floor(Math.random() * themeValues.length)])
-  );
+  const options = [
+    { value: THEME.LIGHT, label: "Light" },
+    { value: THEME.DARK, label: "Dark" },
+    { value: THEME.GRUVBOX, label: "Gruvbox" },
+  ];
 
-  console.log(themeValues);
+  const [theme, setTheme] = useState(options[0]);
 
   return (
     <div className="relative">
@@ -27,7 +28,22 @@ const Home: NextPage<IHomeProps> = () => {
         title="Portfolio - Manavendra Sen | Home"
         description="A blog about software development, programming, and more."
       />
-      <ThemeHandler theme={theme} />
+      <nav className="absolute left-0 top-0 w-full">
+        <Container>
+          <div className="flex justify-end items-end py-8">
+            <div>
+              <Select
+                defaultValue={theme}
+                onChange={opt => {
+                  setTheme(opt!);
+                }}
+                options={options}
+              />
+            </div>
+          </div>
+        </Container>
+      </nav>
+      <ThemeHandler theme={theme.value} />
     </div>
   );
 };

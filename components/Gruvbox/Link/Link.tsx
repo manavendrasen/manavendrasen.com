@@ -29,7 +29,7 @@ export const Link: React.FC<LinkProps> = ({
         >
           {icon}
         </div>
-        <p className="text-gray-900">{name}</p>
+        <p className="text-[#FBFBFB]">{name}</p>
       </div>
     </a>
   );
