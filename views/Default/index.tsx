@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container } from "@mui/material";
-import { Button } from "./Button/Button";
+import { Button, SecButton } from "./Button/Button";
 import { Link } from "./Link/Link";
 import { Navbar } from "./Navbar/Navbar";
 import { Links } from "../../constants/Links";
@@ -69,13 +69,22 @@ const Dark: React.FC<DarkProps> = ({}) => {
 
                 <motion.span variants={fadeIn()}>
                   <div className="py-4 flex justify-between items-center flex-col lg:flex-row gap-8">
-                    <a
-                      href="mailto:manavendra4288@gmail.com?subject=Let's Connect"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Button onClick={() => {}} text="Let's Connect 🙌" />
-                    </a>
+                    <div className="flex gap-4">
+                      <a
+                        href="mailto:manavendra4288@gmail.com?subject=Let's Connect"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Button onClick={() => {}} text="Let's Connect 🙌" />
+                      </a>
+                      <a
+                        href="https://drive.google.com/file/d/18nv-J-HpDucu9XFI015v2yP4eVAhmTEj/view"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <SecButton onClick={() => {}} text="Resume 👨‍💻" />
+                      </a>
+                    </div>
 
                     <div>
                       <div className="flex gap-4 wrap justify-center items-center">
