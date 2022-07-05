@@ -4,8 +4,6 @@ import { Button } from "./Button/Button";
 import { Link } from "./Link/Link";
 import { Navbar } from "./Navbar/Navbar";
 import { Links } from "../../constants/Links";
-import Image from "next/image";
-import HeroImage from "../../assets/images/bg-hero-default.jpg";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "./motionVariants";
 import { ComingSoon } from "./ComingSoon/ComingSoon";
