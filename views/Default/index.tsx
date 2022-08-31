@@ -27,7 +27,7 @@ const Dark: React.FC<DarkProps> = ({}) => {
           }}
         >
           {/* <Navbar> */}
-          <main className="text-white min-h-screen flex justify-center items-center text-center lg:text-left">
+          <main className="text-white h-screen flex justify-center items-center text-center lg:text-left">
             <Container>
               <motion.div
                 variants={staggerContainer}
@@ -78,7 +78,7 @@ const Dark: React.FC<DarkProps> = ({}) => {
                         <Button onClick={() => {}} text="Let's Connect 🙌" />
                       </a>
                       <a
-                        href="https://drive.google.com/file/d/18nv-J-HpDucu9XFI015v2yP4eVAhmTEj/view"
+                        href="https://drive.google.com/file/d/1LQPhMi-vqAzCQEOW8u0DXLyPGr_ZoyDt/view?usp=sharing"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -107,16 +107,6 @@ const Dark: React.FC<DarkProps> = ({}) => {
           </main>
           {/* </Navbar> */}
         </Box>
-        {/* <div className="absolute top-0 left-0 w-full pointer-events-none z- h-screen">
-        <Image
-          // className="blur-2xl opacity-100"
-          src={HeroImage}
-          objectFit="fill"
-          objectPosition="center"
-          layout="fill"
-          alt=""
-        />
-      </div> */}
       </Box>
       <ComingSoon />
       <Footer />
