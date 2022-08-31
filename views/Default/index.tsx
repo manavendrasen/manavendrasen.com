@@ -108,7 +108,7 @@ const Dark: React.FC<DarkProps> = ({}) => {
           {/* </Navbar> */}
         </Box>
       </Box>
-      <ComingSoon />
+      {/* <ComingSoon /> */}
       <Footer />
     </div>
   );
