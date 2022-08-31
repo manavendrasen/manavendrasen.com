@@ -15,20 +15,14 @@ export const Head: React.FC<HeadProps> = ({ title, description }) => {
       <meta property="og:url" content="https://manavendrasen.com/" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
-      <meta
-        property="og:description"
-        content="Developer & UI/UX Designer from India"
-      />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content="/public/link.jpeg" />
-      <meta property="og:title" content="Manavendra Sen | Portfolio" />
-      <meta property="og:site_name" content="Manavendra Sen | Portfolio" />
+      <meta property="og:title" content={title} />
+      <meta property="og:site_name" content={title} />
 
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content="Manavendra Sen | Portfolio" />
-      <meta
-        name="twitter:description"
-        content="Developer & UI/UX Designer from India"
-      />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:creator" content="@manavendrasen" />
       <meta name="twitter:image" content="/public/link.jpeg" />
 
