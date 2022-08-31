@@ -109,7 +109,7 @@ const Dark: React.FC<DarkProps> = ({}) => {
         </Box>
       </Box>
       {/* <ComingSoon /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
