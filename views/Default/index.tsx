@@ -54,16 +54,12 @@ const Dark: React.FC<DarkProps> = ({}) => {
                 <motion.span variants={fadeIn()}>
                   <p className="text-slate-200">
                     I&apos;m a software engineer specializing in building and
-                    designing exceptional digital experiences. <br /> Currently
-                    I&apos;m building DevOps solutions at{" "}
-                    <a
-                      className="text-yellow-400"
-                      href="https://www.dell.com/en-in"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Dell Technologies
-                    </a>
+                    designing exceptional digital experiences.
+                    <br />
+                    <br />
+                    <span className="text-green-600 font-medium">
+                      • Currently looking for Opportunities.
+                    </span>
                   </p>
                 </motion.span>
 
