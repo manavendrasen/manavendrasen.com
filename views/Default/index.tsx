@@ -1,4 +1,5 @@
 import React from "react";
+import NextLink from "next/link";
 import { Box, Container } from "@mui/material";
 import { Button, SecButton } from "./Button/Button";
 import { Link } from "./Link/Link";
@@ -73,13 +74,9 @@ const Dark: React.FC<DarkProps> = ({}) => {
                       >
                         <Button onClick={() => {}} text="Let's Connect 🙌" />
                       </a>
-                      <a
-                        href="https://drive.google.com/file/d/1LQPhMi-vqAzCQEOW8u0DXLyPGr_ZoyDt/view?usp=sharing"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <NextLink href="/resume">
                         <SecButton onClick={() => {}} text="Resume 👨‍💻" />
-                      </a>
+                      </NextLink>
                     </div>
 
                     <div>
