@@ -24,7 +24,7 @@ export const Link: React.FC<LinkProps> = ({
             color: color,
             fontSize: 20,
           }}
-          className="rounded-xl w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center shadow-md hover:brightness-125  transition-all"
+          className="rounded-full w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center shadow-md hover:brightness-125  transition-all"
         >
           {icon}
         </div>

@@ -4,9 +4,17 @@ import { FaGithub } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
+import { MdEmail } from "react-icons/md";
 import Peerlist from "../assets/images/peerlist_icon.png";
 
 export const Links = [
+  {
+    name: "Gmail",
+    href: "mailto:manavendra4288@gmail.com?subject=Let's Connect",
+    icon: <MdEmail />,
+    primaryColor: "#ea4335",
+    color: "#ffffff",
+  },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/manavendrasen/",
@@ -19,13 +27,6 @@ export const Links = [
     href: "https://github.com/manavendrasen",
     icon: <FaGithub />,
     primaryColor: "#23272D",
-    color: "#ffffff",
-  },
-  {
-    name: "Peerlist",
-    href: "https://peerlist.io/manavendrasen",
-    icon: <Image src={Peerlist} alt="" width={20} height={20} />,
-    primaryColor: "#00AA45",
     color: "#ffffff",
   },
   {

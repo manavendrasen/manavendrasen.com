@@ -10,6 +10,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md}\""
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.0.9",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.3",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NextLink from "next/link";
 import { Box, Container } from "@mui/material";
 import { Button, SecButton } from "./Button/Button";
@@ -9,10 +9,26 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "./motionVariants";
 import { ComingSoon } from "./ComingSoon/ComingSoon";
 import { Footer } from "./Footer/Footer";
+import { useRouter } from "next/router";
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 interface DarkProps {}
 
 const Dark: React.FC<DarkProps> = ({}) => {
+  const router = useRouter();
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      if (cal) {
+        cal("ui", {
+          theme: "dark",
+          styles: { branding: { brandColor: "#000000" } },
+        });
+      } else {
+        router.push("mailto:manavendra4288@gmail.com");
+      }
+    })();
+  }, []);
   return (
     <div className="bg-[#161622] flex flex-col">
       <Box
@@ -57,23 +73,23 @@ const Dark: React.FC<DarkProps> = ({}) => {
                     I&apos;m a software engineer specializing in building and
                     designing exceptional digital experiences.
                     <br />
-                    <br />
-                    <span className="text-green-600 font-medium">
+                    {/* <br /> */}
+                    {/* <span className="text-green-200 font-medium">
                       • Currently looking for Opportunities.
-                    </span>
+                    </span> */}
                   </p>
                 </motion.span>
 
                 <motion.span variants={fadeIn()}>
                   <div className="py-4 flex justify-between items-center flex-col lg:flex-row gap-8">
                     <div className="flex gap-4">
-                      <a
-                        href="mailto:manavendra4288@gmail.com?subject=Let's Connect"
-                        target="_blank"
-                        rel="noreferrer"
+                      <button
+                        className="bg-[#4743FE] hover:bg-[#4844b5] w-max font-semibold rounded-full shadow-sm py-3 px-6 capitalize text-base transition-all"
+                        data-cal-link="manavendrasen/30min"
                       >
-                        <Button onClick={() => {}} text="Let's Connect 🙌" />
-                      </a>
+                        Let&apos;s Connect 🙌
+                      </button>
+                      {/* </a> */}
                       <NextLink href="/resume">
                         <SecButton onClick={() => {}} text="Resume 👨‍💻" />
                       </NextLink>

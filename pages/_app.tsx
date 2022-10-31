@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 // <script async src=""></script>
 // <script>
 //
 // </script>
 
-function MyApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <React.Fragment>
       <Script
@@ -25,6 +26,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </React.Fragment>
   );
-}
+};
 
-export default MyApp;
+export default App;
