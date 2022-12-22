@@ -38,7 +38,7 @@ export const Links = [
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/channel/UCEcCKqet47IWQFRt9zfGw8Q",
+    href: "https://www.youtube.com/@manavendrasen",
     icon: <FaYoutube />,
     primaryColor: "#FF0000",
     color: "#ffffff",
