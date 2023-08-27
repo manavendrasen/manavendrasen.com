@@ -64,14 +64,13 @@ const Dark: React.FC<DarkProps> = ({}) => {
 
                 <motion.span variants={fadeIn()}>
                   <h1 className="lg:text-6xl text-4xl font-bold leading-tight text-indigo-200 opacity-40 bg-brightness-200">
-                    Developer & UI/UX Designer from India
+                    I build digital experiences.
                   </h1>
                 </motion.span>
 
                 <motion.span variants={fadeIn()}>
                   <p className="text-slate-200">
-                    I&apos;m a software engineer specializing in building and
-                    designing exceptional digital experiences.
+                    I&apos;m all about weaving together lines of code and sleek designs to craft digital experiences that leave an impact. 
                     <br />
                     {/* <br /> */}
                     {/* <span className="text-green-200 font-medium">
@@ -90,9 +89,9 @@ const Dark: React.FC<DarkProps> = ({}) => {
                         Let&apos;s Connect 🙌
                       </button>
                       {/* </a> */}
-                      <NextLink href="/resume">
+                      {/* <NextLink href="/resume">
                         <SecButton onClick={() => {}} text="Resume 👨‍💻" />
-                      </NextLink>
+                      </NextLink> */}
                     </div>
 
                     <div>
