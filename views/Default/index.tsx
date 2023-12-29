@@ -29,6 +29,7 @@ const Dark: React.FC<DarkProps> = ({}) => {
       }
     })();
   }, []);
+
   return (
     <div className="bg-[#161622] flex flex-col">
       <Box
@@ -70,7 +71,8 @@ const Dark: React.FC<DarkProps> = ({}) => {
 
                 <motion.span variants={fadeIn()}>
                   <p className="text-slate-200">
-                    I&apos;m all about weaving together lines of code and sleek designs to craft digital experiences that leave an impact. 
+                    I&apos;m all about weaving together lines of code and sleek
+                    designs to craft digital experiences that leave an impact.
                     <br />
                     {/* <br /> */}
                     {/* <span className="text-green-200 font-medium">
