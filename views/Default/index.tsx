@@ -91,9 +91,9 @@ const Dark: React.FC<DarkProps> = ({}) => {
                         Let&apos;s Connect 🙌
                       </button>
                       {/* </a> */}
-                      {/* <NextLink href="/resume">
+                      <NextLink href="/resume">
                         <SecButton onClick={() => {}} text="Resume 👨‍💻" />
-                      </NextLink> */}
+                      </NextLink>
                     </div>
 
                     <div>
