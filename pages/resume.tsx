@@ -5,14 +5,11 @@ import { Button } from "../views/Default/Button/Button";
 import Link from "next/link";
 
 const Resume = () => {
-  const [numPages, setNumPages] = useState<number | null>(null);
-  const [pageNumber, setPageNumber] = useState<number>(1);
-
   return (
     <>
       <Head
         title="Resume - Manavendra Sen"
-        description="Upcoming SWE'23 @ JPMC | SDE Intern'22 @ Dell | 6x Hackathon Winner (3x International) | Full Stack MERN Developer | Devops | web3"
+        description="Software Engineer at JPMorgan Chase & Co. | ex - SDE Intern @Dell | 7x Hackathon Winner (4x International) | Full Stack Developer | AWS Certified"
       />
       <div className="px-4 mx-auto container flex justify-center py-10 w-full h-screen flex-col gap-3">
         <div className="flex justify-between items-center text-white w-full">
@@ -25,7 +22,7 @@ const Resume = () => {
             Resume
           </h2>
           <a
-            href="https://drive.google.com/file/d/1LQPhMi-vqAzCQEOW8u0DXLyPGr_ZoyDt/view?usp=sharing"
+            href="https://manavendrasen-resume.s3.ap-south-1.amazonaws.com/Manavendra_Sen_Resume.pdf"
             target="_blank"
             rel="noreferrer"
           >
@@ -36,7 +33,7 @@ const Resume = () => {
           If you are unable to view the resume, please
           <a
             className="text-blue-500 underline px-1"
-            href="https://drive.google.com/file/d/1LQPhMi-vqAzCQEOW8u0DXLyPGr_ZoyDt/view?usp=sharing"
+            href="https://manavendrasen-resume.s3.ap-south-1.amazonaws.com/Manavendra_Sen_Resume.pdf"
             target="_blank"
             rel="noreferrer"
           >
@@ -46,7 +43,7 @@ const Resume = () => {
         </p>
         <div className="p-2 rounded-lg bg-gray-300 w-full h-full mt-5">
           <iframe
-            src="https://drive.google.com/file/d/1LQPhMi-vqAzCQEOW8u0DXLyPGr_ZoyDt/preview"
+            src="https://manavendrasen-resume.s3.ap-south-1.amazonaws.com/Manavendra_Sen_Resume.pdf"
             width="100%"
             height="100%"
             allow="autoplay"

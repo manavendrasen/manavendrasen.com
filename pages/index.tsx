@@ -13,7 +13,7 @@ const Home: NextPage<IHomeProps> = () => {
     <div className="relative">
       <Head
         title="Portfolio - Manavendra Sen | Home"
-        description="Software Engineer @ J.P. Morgan Chase & Co | Full Stack MERN Developer | Devops "
+        description="Software Engineer at JPMorgan Chase & Co. | ex - SDE Intern @Dell | 7x Hackathon Winner (4x International) | Full Stack Developer | AWS Certified"
       />
       <Default />
     </div>
