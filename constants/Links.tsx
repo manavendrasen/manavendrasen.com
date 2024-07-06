@@ -11,7 +11,7 @@ import Peerlist from "../assets/images/peerlist_icon.png";
 export const Links = [
   {
     name: "Blogs",
-    href: "blog.manavendrasen.com",
+    href: "https://blog.manavendrasen.com",
     icon: <SiHashnode />,
     primaryColor: "#2563e5",
     color: "#ffffff",

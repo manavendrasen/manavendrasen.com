@@ -97,7 +97,7 @@ const Dark: React.FC<DarkProps> = ({}) => {
                     </div>
 
                     <div>
-                      <div className="flex gap-4 wrap justify-center items-center">
+                      <div className="flex gap-4 flex-wrap justify-center items-center px-8">
                         {Links.map(link => (
                           <Link
                             key={link.href}
