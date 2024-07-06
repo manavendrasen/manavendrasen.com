@@ -5,9 +5,17 @@ import { FaBehance } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
+import { SiHashnode } from "react-icons/si";
 import Peerlist from "../assets/images/peerlist_icon.png";
 
 export const Links = [
+  {
+    name: "Blogs",
+    href: "blog.manavendrasen.com",
+    icon: <SiHashnode />,
+    primaryColor: "#2563e5",
+    color: "#ffffff",
+  },
   {
     name: "Gmail",
     href: "mailto:manavendra4288@gmail.com?subject=Let's Connect",
